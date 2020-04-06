@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <title>Directios</title>
+    <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    a:hover{
+       color: blue;
+       text-decoration: underline;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    header{
+        background: black;
+     
+    }
+
+    h1{
+        color: white;
+    }
+
+    ul{
+      list-style-type:  none; 
+      margin:0;
+      padding:0;
+    }
+
+    
+    li{
+    display: inline-block;
+    margin-right:20px;
+    }
+
+    .boxes{
+        display: flex;
+    }
+
+    .boxes div{
+        width: 100%;
+        margin-right:0.5px;  
+        border-radius:3px;  
+    }
+
+    .boxes.A div{
+        background: grey;
+     
+    }
+    
+    .boxes.B div{
+        background: red;
+      
+    }
+
+    #test{
+        background: rgb(184, 184, 184);
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="locations.html">locations</a></l1>
+                <li><a href="contacts.html"> Contacts</a></l1>
+                <li><a href="directions.html"> Directions</a></l1>   
+            </ul>
+
+        </nav>
+        <h1>Directions</h1>
+    </header>
+    <section class="boxes A"> 
+        <div id="test">S1a</div>
+        <div>S1b</div>
+        <div>S1c</div>
+    </section>
+    <section class="boxes B">
+        <div>S2a</div>
+        <div>S2b</div>
+    </section>
+    
+</body>
