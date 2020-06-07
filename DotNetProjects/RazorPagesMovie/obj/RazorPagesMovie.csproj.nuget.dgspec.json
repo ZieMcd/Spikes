@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/zie/Projects/DotNetProjects/RazorPagesMovie/RazorPageMovie.csproj": {}
+    "/home/zie/Projects/spikes/DotNetProjects/RazorPagesMovie/RazorPagesMovie.csproj": {}
   },
   "projects": {
-    "/home/zie/Projects/DotNetProjects/RazorPagesMovie/RazorPageMovie.csproj": {
+    "/home/zie/Projects/spikes/DotNetProjects/RazorPagesMovie/RazorPagesMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/zie/Projects/DotNetProjects/RazorPagesMovie/RazorPageMovie.csproj",
-        "projectName": "RazorPageMovie",
-        "projectPath": "/home/zie/Projects/DotNetProjects/RazorPagesMovie/RazorPageMovie.csproj",
+        "projectUniqueName": "/home/zie/Projects/spikes/DotNetProjects/RazorPagesMovie/RazorPagesMovie.csproj",
+        "projectName": "RazorPagesMovie",
+        "projectPath": "/home/zie/Projects/spikes/DotNetProjects/RazorPagesMovie/RazorPagesMovie.csproj",
         "packagesPath": "/home/zie/.nuget/packages/",
-        "outputPath": "/home/zie/Projects/DotNetProjects/RazorPagesMovie/obj/",
+        "outputPath": "/home/zie/Projects/spikes/DotNetProjects/RazorPagesMovie/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/zie/.nuget/NuGet/NuGet.Config"
@@ -35,12 +35,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.1.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -51,6 +45,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
         }
       }
     }
