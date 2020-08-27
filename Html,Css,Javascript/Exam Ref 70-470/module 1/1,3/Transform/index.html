@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #orange1 {
+            height: 150 px;
+            width: 225 px;
+        }
+        .trans {
+            transform: rotate(90deg) scale(2);
+            /* transform: scale(2); */
+            /* transform: translate(50px,0px);
+            transform: skew(10deg, 10deg); */
+
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            document.getElementById("orange1").onclick = function () {
+                this.classList.add("trans");
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="orange1" src="orange.jpg" style="position:relative;">
+</body>
+</html>

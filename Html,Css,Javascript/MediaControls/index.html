@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img:hover {
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        var video;
+        window.onlaod = function () {
+            video = document.getElementById("sampleVideo");
+        }
+
+        function play() {
+            video.play;
+        }
+
+        function pause() {
+            video.pause;
+        }
+
+        function back() {
+            video.currentTime -= 10;
+        }
+    </script>
+</head>
+<body>
+   <table>
+       <tr>
+           <td>
+               <video height="400" width="600" id="sampleVideo">
+                   <source src="Rick.mp4" type="audio/mp4"/> 
+               </video>
+           </td>
+       </tr>
+       <td>
+            <!--add imgames for butting give them referecvs to the functions made in the scrip-->
+       </td>
+   </table>
+</body>
+</html>

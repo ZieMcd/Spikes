@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border : 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var drawingSurface = document.getElementById("drawingSurface");
+            var ctxt = drawingSurface.getContext("2d");
+
+            ctxt.beginPath();
+            ctxt.moveTo(10,10);
+            ctxt.lineTo(225,350);
+
+            ctxt.lineWidth = 5;
+            ctxt.strokeStyle = "#0f0"
+            
+            ctxt.arc(150,100,75,0,2 * Math.PI, false);
+            ctxt.stroke();
+
+
+            var canvas2 = document.getElementById("canvas2");
+            var ctxt2 = canvas2.getContext("2d");
+
+            ctxt2.beginPath();
+            ctxt2.arc(300, 200, 75, 1.75 * Math.PI, 1.25 * Math.PI, false);
+            ctxt2.lineTo(150,125);
+            ctxt2.quadraticCurveTo(300, 0, 450, 125);
+            ctxt2.lineTo(353, 144);
+            ctxt2.strokeStyle = "blue";
+            ctxt2.lineCap = "round";
+            ctxt2.lineWidth = 10;
+            ctxt2.fillStyle = "green";
+            ctxt2.fill();
+
+            ctxt2.stroke();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="drawingSurface" width="600" height="400">
+        Your browser does not support HTML5.
+    </canvas>
+    <canvas id="canvas2" width="600" height="400"></canvas>
+</body>
+</html>
