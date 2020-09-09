@@ -1,0 +1,12 @@
+# This an example
+#
+
+CACHE
+/pages/page1.html
+/pages/page1.html
+
+NETWORK
+login.html
+
+FALLBACK
+login.html   fallback-login.html

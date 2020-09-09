@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            var sports = ['soccer', 'basketball', 'hockey'];
+
+            sports.forEach(offerSport);
+
+            function offerSport(value, index, array) {
+                var list = document.getElementById("list");
+                var bullet = document.createElement("li");
+                bullet.innerText = value;
+                list.appendChild(bullet);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="list">
+
+    </div>
+</body>
+</html>

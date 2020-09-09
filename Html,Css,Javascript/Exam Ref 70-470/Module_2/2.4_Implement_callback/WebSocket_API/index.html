@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //The full implementation of a WebSocket API requires that a webserver have a 
+        // proper server-side implementation that can accept socket connections. 
+        // Technologies such as Node.js, so this code probaly wont work
+
+        window.onload = function () {
+
+            var wsConnection;
+            var chatBox = document.getElementById("chatWindow");
+            var disconnectButton = document.getElementById("Disconnect");
+            var connectButton = document.getElementById("Connect");
+            var sendButton = document.getElementById("Send");
+            var msgToSend = document.getElementById("msgSent"); 
+
+            disconnectButton.onclick = function () {
+                wsConnection.close();
+            }
+            
+            connectButton.onclick = function () {
+                // Opens the WebSocket
+                wsConnection = new WebSocket ('ws://studygroup.70480.com',['soap','xmpp']);
+            }
+
+            sendButton.onclick = function () {
+                //chec the state of the connection
+                if (wsConnection.readyState == WebSocket.OPEN) {
+                    wsConnection.send(msgToSend.nodeValue);
+                }
+                else
+                    return;
+                
+                //show message in chat window
+                NewLine();
+                chatBox.nodeValue = chatBox.nodeValue + "You: " + msgToSend.nodeValue;
+                msgToSend.nodeValue = '';
+            }
+
+            wsConnection.onopen = function () {
+                chatBox.textContent = chatBox.textContent + "System: Connection has been established";
+            }
+
+            wsConnection.onerror = function (err) {
+                NewLine();
+                chatBox.nodeValue = "System: Error Occurred";
+            }
+            wsConnection.onclose = function () {
+                chatBox.nodeValue = "Closed";
+            }
+            
+
+            function NewLine() {
+                chatBox.textContent = chatBox.textContent + '\r\n';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div align = "center">
+        <div>
+            Chat Form
+        </div>
+        <div>
+            <textarea  id="chatWindow" style="height: 500px; width: 300px;"></textarea>
+        </div>
+        <div>
+            <input type="text" id="msgSent" style="width: 300px;">
+        </div>
+        <div>
+            <button id="Disconnect">Disconnect</button>
+            <button id="Connect">Connect</button>
+            <button id="Send">Send</button>
+        </div>
+    </div>
+</body>
+</html>

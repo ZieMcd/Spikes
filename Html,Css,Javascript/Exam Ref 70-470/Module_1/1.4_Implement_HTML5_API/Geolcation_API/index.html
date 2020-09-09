@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>   
+    window.onload = function () {
+        //alert("hi");
+        if(navigator.geolocation) {
+
+            //var geoLocattor = navigator.geolocation;
+            //geolocation.getCurrentPosition(successPostion);
+            
+            navigator.geolocation.getCurrentPosition(successPostion,errorPosition);
+            //alert("test");
+
+        }else {
+            alert("Geolocation is not supported by this browser.")
+        }
+       // var posOption = {enableHighAccuracy: true, timeout:4500};
+        
+        function successPostion(position) {
+            alert(pos.coords.latitude);
+            alert("hi");
+        }
+        function errorPosition(err) {
+            alert(err);
+            alert("hi");
+        }
+    }
+    </script>
+</head>
+<body>
+   <div id="geoResult">
+       <p>Current Location is</p>
+   </div> 
+</body>
+</html>

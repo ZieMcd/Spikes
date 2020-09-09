@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function() {
+        var canvas = document.getElementById("can1");
+
+
+        if (canvas.style.backgroundColor == 'green') {
+            alert('proceed');
+        } else if(canvas.style.backgroundColor == 'red') {
+            alert('stop');
+        }
+
+        var speed = 'fast';
+
+        switch (speed) {
+            case 'fast':
+                alert('slow down');
+                break;
+            case 'slow':
+                alert('speed up');
+                break;
+            default:
+                alert('unkown speed');
+                break;
+
+        }
+        
+    }
+</script>
+<body>
+    <canvas id="can1" style="background-color: green;"></canvas>
+</body>
+</html>

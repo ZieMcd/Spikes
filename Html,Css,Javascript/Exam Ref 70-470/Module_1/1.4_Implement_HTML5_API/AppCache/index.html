@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" manifest="webApp.appcache">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            var appCache = window.applicationCache;
+            appCache.oncached = function (e) {alert("cache successfully"); };
+            appCache.onupdateready = function (e) { appCache.swapCache(); };
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
